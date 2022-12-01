@@ -1,0 +1,50 @@
+First step to generate ssh keys(private and public keys) to establish secure connection between local computer and github/gitlab/bitbucket Enter below command in terminal or cmd and change useremail according to your github account
+>	ssh-keygen -t ed25519 -C "razzdhungana49@outlook.com"
+
+Second: After entering above command in terminal we have to enter passphrase which will act like  password in the future while working in secure transmission and in this directory public key and private key wil be generated( in windows platform). (.pub extension file is public key)
+>	C:\Users\DELL/.ssh/id_ed25519.pub  
+
+Third: We will read value from above .ssh directory's public file  and copy it to github account (setting/ssh-key) go to button(add new ssh key) and add public key in github account which will establish a secure connection between my local computer and my github account projects and sometimes it can ask passphare while cloning the project so we must not forget passphrase too.
+
+Fourth: Ssh setup is finised and next we will move to install git on windows/linux
+>	https://gitforwindows.org/
+
+Fifth: Software(git) installed with all default options
+
+Sixth: Create new repository on github(github.com) with required details with repository names like(prive or public) 
+
+Seventh: Follow commands given in repository with these commands provided after crating new repository
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:razz-dhungana/Landing-page-demo.git
+git push -u origin main
+
+
+Eighth: Go to project directory to current project working directory with the help of commands in terminal
+
+Ninth: git init
+This command will initialize empty git repository inside the current working project directory(local repository/repo)
+
+Tenth: git add README.md
+If  README.md file does not exist create README.md file in the current working project directory(local repository/repo)
+
+Eleventh: git commit -m "first commit"
+This command creates the first commit as a commit message where user can provdie current working or work detail in message for future reference
+
+Twelveth: git branch -M main 
+You can skip this command as it is not important because by default first branch is stored in master branch as this command will tell git to create new branch as main
+
+Thirteenth: git remote add origin git@github.com:razz-dhungana/Landing-page-demo.git
+remote: github
+local: personal computer which we are working right now
+origin: In Git, "origin" is a shorthand name for the remote repository that a project was originally cloned from. More precisely, it is used instead of that original repository's URL - and thereby makes referencing much easier. Note that origin is by no means a "magical" name, but just a standard convention.
+
+This command tells local repo to connect with particular user from particular github/gitlab to particular remote repo
+
+Fourteenth: git push -u origin main
+git push -u origin master 
+We will use second command as we were working on master branch as we had skipped 12th step but if you had not skipped twelveth command then you can use the first command which is (git push -u origin main)
+
